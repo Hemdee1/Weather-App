@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "The Switch",
+      "content": "The switch basically connects end devices using network cables. These channels end devices to the router, through its several ports. It receives signals then chooses the port to which the destination device is connected. The switch improves the performance of a network by affecting the speed and the bandwidth of the network.",
+      "author": "mario",
+      "id": 1
+    },
+    {
+      "title": "The Router",
+      "content": "A router is an electronic device and/or software that connect at least two networks together and forwards packets among them according to the information in the packet headers and routing tables Routers use IP addresses to forward frames to other networks. ",
+      "author": "luigi",
+      "id": 2
+    },
+    {
+      "title": "Prophet Muhammad",
+      "content": "Muhammad ibn Abdullah was an Arab religious, social, and political leader and the founder of the world religion of Islam.\nAccording to  Islamic doctrine, he was a prophet, divinely inspired to preach and confirm the monotheistic teachings of Adam, Abraham, Moses, Jesus and other prophets.",
+      "author": "mario",
+      "id": 3
+    },
+    {
+      "title": "A Boy",
+      "content": "He is an ambitious small boy from a prestigious family, he is not  afraid to follow his dream",
+      "author": "luigi",
+      "id": 4
+    }
+  ]
+}
