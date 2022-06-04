@@ -5,15 +5,13 @@ import { useGlobalContext } from "../context";
 
 const SearchBar = () => {
   const [value, setValue] = useState("");
-  const { data, fetchWeather } = useGlobalContext();
+  const { fetchWeather } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (value) {
       fetchWeather(value);
-
-      console.log(data);
     }
     setValue("");
   };

@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import { apiKey } from "./config";
+import React, { useContext, useState, useEffect, useCallback } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
@@ -7,12 +6,18 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  // console.log(
+  //   `https://api.openweathermap.org/data/2.5/weather?q=${"bauchi"}&appid=${
+  //     process.env.react_app_api_key
+  //   }`
+  // );
+
   const fetchWeather = async (city) => {
     try {
       setLoading(true);
       setError(false);
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.react_app_api_key}`
       );
       const res = await response.json();
       setLoading(false);
@@ -20,7 +25,6 @@ const AppProvider = ({ children }) => {
         throw Error("City name doesn't exist, try a different name");
       }
       setData(res);
-      // document.body.style.background = "lightskyblue";
     } catch (error) {
       setError(true);
     }
