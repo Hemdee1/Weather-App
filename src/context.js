@@ -1,16 +1,10 @@
-import React, { useContext, useState, useEffect, useCallback } from "react";
+import React, { useContext, useState, useEffect } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-
-  // console.log(
-  //   `https://api.openweathermap.org/data/2.5/weather?q=${"bauchi"}&appid=${
-  //     process.env.react_app_api_key
-  //   }`
-  // );
 
   const fetchWeather = async (city) => {
     try {
